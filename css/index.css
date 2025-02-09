@@ -359,6 +359,7 @@ button {
   }
 }
 .footer__contacts-list {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   z-index: 3;
@@ -389,6 +390,7 @@ button {
   gap: 25px;
 }
 .footer__copyright-item {
+  list-style-type: none;
   display: flex;
   align-items: center;
   gap: 15px;
