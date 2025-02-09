@@ -443,6 +443,7 @@ button {
   }
 }
 .main__social {
+  list-style-type: none;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -625,6 +626,10 @@ button {
   height: 220px;
   float: left;
 }
+.overlay-inner__image-copyright {
+  width: 200px;
+  height: 200px;
+}
 .overlay-inner__image img {
   width: 100%;
   height: 100%;
@@ -645,6 +650,9 @@ button {
   color: #d5d5d5;
   text-indent: 40px;
   line-height: 20px;
+}
+.overlay-inner-text-top a {
+  color: #9595eb;
 }
 .overlay-inner-text span {
   font-weight: bold;
@@ -672,6 +680,9 @@ button {
   color: #d5d5d5;
   margin-top: 10px;
 }
+.overlay-inner-subtitle a {
+  color: #9595eb;
+}
 .overlay-inner-list {
   margin-top: 20px;
   display: flex;
@@ -694,4 +705,12 @@ button {
 .overlay-inner-signature {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.overlay-inner-list-nested {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 40px;
+  list-style-type: circle;
 }

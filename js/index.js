@@ -30,168 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//оверлей;
-// import { initialOverlayData } from "./data.js";
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const openOverlayBtns = document.querySelectorAll(
-//     ".header__logo,.header__contacts-name,.main__image-l,.main__image-c,.main__image-r,.footer__top,.footer__copyright-item li,.footer__copyright-bottom"
-//   );
-//   const overlay = document.getElementById("overlay");
-//   const overlayClose = document.querySelector(".overlay-close");
-//   const overlayImage = document.querySelector(".overlay-inner__image img");
-//   const overlayText = document.querySelector(".overlay-inner-text");
-//   const scrollLock = document.body;
-
-//   if (openOverlayBtns) {
-//     openOverlayBtns.forEach((item, index) => {
-//       item.addEventListener("click", function () {
-//         overlay.classList.add("active");
-//         scrollLock.classList.add("lock");
-
-//         const dataIndex = index % initialOverlayData.length;
-//         const currentData = initialOverlayData[dataIndex];
-
-//         if (currentData) {
-//           overlayImage.src = currentData.image;
-//           overlayText.textContent = currentData.text;
-//         } else {
-//           console.error(
-//             "Ошибка: Данные для индекса",
-//             dataIndex,
-//             "отсутствуют."
-//           );
-//         }
-//       });
-//     });
-//   }
-
-//   overlay.addEventListener("click", function (event) {
-//     if (event.target === overlay || event.target === overlayClose) {
-//       overlay.classList.remove("active");
-//       scrollLock.classList.remove("lock");
-//     }
-//   });
-
-//   overlayClose.addEventListener("click", function () {
-//     overlay.classList.remove("active");
-//     scrollLock.classList.remove("lock");
-//   });
-// });
-/****************************************************************************************************************************************/
-// import { initialOverlayData } from "./data.js";
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const openOverlayBtns = document.querySelectorAll(
-//     "#header-logo, #header__contacts, #left, #center, #right, #requisites, #custom, #politics, #copyright"
-//   ); // выбираем элементы по id
-//   const overlay = document.getElementById("overlay");
-//   const overlayClose = document.querySelector(".overlay-close");
-//   const overlayImage = document.querySelector(".overlay-inner__image img"); // выбираем img внутри overlay-inner__image
-//   const overlayText = document.querySelector(".overlay-inner-text");
-
-//   if (openOverlayBtns) {
-//     openOverlayBtns.forEach((item) => {
-//       item.addEventListener("click", function () {
-//         const itemId = item.id; // получаем id элемента, на который кликнули
-
-//         // ищем в массиве объект, у которого id совпадает с id элемента
-//         const currentData = initialOverlayData.find(
-//           (data) => data.id === itemId
-//         );
-
-//         if (currentData) {
-//           // если нашли данные, то заполняем оверлей
-//           overlayImage.src = currentData.image;
-//           overlayText.textContent = currentData.text;
-//           overlay.style.display = "flex"; // показываем оверлей
-//         } else {
-//           console.warn(`Данные для элемента с id "${itemId}" не найдены.`);
-//           // Можно добавить сюда логику обработки отсутствующих данных
-//         }
-//       });
-//     });
-//   }
-
-//   overlay.addEventListener("click", function (event) {
-//     if (event.target === overlay || event.target === overlayClose) {
-//       overlay.style.display = "none"; // скрываем оверлей
-//     }
-//   });
-
-//   overlayClose.addEventListener("click", function () {
-//     overlay.style.display = "none"; // скрываем оверлей
-//   });
-// });
-/*********************************************** */
-// const overlay = document.getElementById("overlay");
-// const overlayClose = document.querySelector(".overlay-close");
-// const scrollLock = document.body;
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const openOverlayBtns = document.querySelector(".header__logo");
-//   if (openOverlayBtns) {
-//     openOverlayBtns.addEventListener("click", () => {
-//       overlay.classList.add("active");
-//     });
-//   }
-
-//   if (overlayClose) {
-//     overlayClose.addEventListener("click", () => {
-//       overlay.classList.remove("active");
-//     });
-//   }
-//   overlay.addEventListener("click", function (event) {
-//     if (event.target === overlay || event.target === overlayClose) {
-//       overlay.classList.remove("active");
-//     }
-//   });
-// });
-/***************************************************************************************** */
-// const overlay = document.getElementById("overlay");
-// const overlayClose = document.querySelector(".overlay-close");
-// const overlayInner = document.querySelector(".overlay-inner"); // Контейнер для темплейта
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const openOverlayBtn = document.querySelector(".header__logo"); // Кнопка или элемент, открывающий оверлей
-//   const templateLogo = document.getElementById("templateLogo"); // Получаем темплейт
-
-//   if (
-//     openOverlayBtn &&
-//     overlay &&
-//     overlayClose &&
-//     overlayInner &&
-//     templateLogo
-//   ) {
-//     openOverlayBtn.addEventListener("click", () => {
-//       // Клонируем содержимое temlate
-//       const templateContent = templateLogo.content.cloneNode(true);
-
-//       // Очищаем содержимое overlay-inner
-//       overlayInner.innerHTML = "";
-
-//       // Добавляем содержимое темплейта в overlay-inner
-//       overlayInner.appendChild(templateContent);
-
-//       // Отображаем оверлей
-//       overlay.classList.add("active");
-//     });
-
-//     overlayClose.addEventListener("click", () => {
-//       overlay.classList.remove("active");
-//     });
-
-//     overlay.addEventListener("click", function (event) {
-//       if (event.target === overlay) {
-//         overlay.classList.remove("active");
-//       }
-//     });
-//   } else {
-//     console.error(
-//       "Один или несколько элементов не найдены. Проверьте ID и классы."
-//     );
-//   }
-// });
+//открытие оверлея и отрисовка темплейта
 const overlay = document.getElementById("overlay");
 const overlayClose = document.querySelector(".overlay-close");
 const overlayInner = document.querySelector(".overlay-inner");
@@ -217,6 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Добавляем содержимое template в overlay-inner
           overlayInner.appendChild(templateContent);
+
+          // Возвращаем прокрутку overlay-inner в начало (с задержкой)
+          setTimeout(() => {
+            overlayInner.scrollTo(0, 0);
+          }, 0); // Небольшая задержка
 
           // Отображаем оверлей
           overlay.classList.add("active");
