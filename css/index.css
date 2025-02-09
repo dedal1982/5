@@ -638,8 +638,16 @@ button {
 }
 .overlay-inner-text-top {
   margin-top: 80px;
+  font-family: "Montserrat_0", sans-serif;
+  font-weight: normal;
+  color: #d5d5d5;
+  text-indent: 40px;
+  line-height: 20px;
 }
 .overlay-inner-text span {
+  font-weight: bold;
+}
+.overlay-inner-text-top span {
   font-weight: bold;
 }
 .overlay-inner-separator {
@@ -683,4 +691,5 @@ button {
 }
 .overlay-inner-signature {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
