@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const overlay = document.getElementById("overlay");
 const overlayClose = document.querySelector(".overlay-close");
 const overlayInner = document.querySelector(".overlay-inner");
+const body = document.body; // Получаем элемент body
 
 document.addEventListener("DOMContentLoaded", function () {
   const openOverlayBtns = document.querySelectorAll("[id]"); // Выбираем все элементы с id
@@ -62,6 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
             overlayInner.scrollTo(0, 0);
           }, 0); // Небольшая задержка
 
+          // Добавляем класс 'lock' к body
+          body.classList.add("lock");
+
           // Отображаем оверлей
           overlay.classList.add("active");
         } else {
@@ -74,11 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     overlayClose.addEventListener("click", () => {
       overlay.classList.remove("active");
+      // Удаляем класс 'lock' из body
+      body.classList.remove("lock");
     });
 
     overlay.addEventListener("click", function (event) {
       if (event.target === overlay) {
         overlay.classList.remove("active");
+        // Удаляем класс 'lock' из body
+        body.classList.remove("lock");
       }
     });
   } else {
