@@ -714,3 +714,20 @@ button {
   margin-left: 40px;
   list-style-type: circle;
 }
+@media screen and (max-width: 767px) {
+  .overlay-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .overlay-content {
+    height: 80dvh;
+    padding: 20px 10px;
+  }
+  .overlay-inner__image {
+    margin: 0 auto;
+  }
+  .overlay-inner-text-top {
+    margin-top: 20px;
+  }
+}
