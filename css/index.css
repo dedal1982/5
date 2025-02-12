@@ -3,6 +3,7 @@
   src: url("../fonts/berniershade_regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url("../fonts/BLACEB_.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,12 +19,14 @@
   src: url("../fonts/BuyanBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Buyan";
   src: url("../fonts/BuyanRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -30,6 +34,7 @@
   src: url("../fonts/BuyanThin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -37,18 +42,21 @@
   src: url("../fonts/Extreme Glitch.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat_0";
   src: url("../fonts/Montserrat_0.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -56,6 +64,7 @@
   src: url("../fonts/Skate Brand.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 * {
   margin: 0;
