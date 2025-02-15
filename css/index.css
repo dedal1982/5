@@ -173,7 +173,7 @@ button {
 }
 @media screen and (max-width: 480px) {
   .header__title {
-    max-width: 160px;
+    max-width: 60%;
   }
 }
 .header__logo {
