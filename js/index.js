@@ -79,12 +79,3 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 });
-
-/**********/
-function setWrapperHeight() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-}
-
-setWrapperHeight();
-window.addEventListener("resize", setWrapperHeight);

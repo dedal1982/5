@@ -435,7 +435,7 @@ button {
   background: #252729;
 }
 .main__wrapper {
-  height: calc(var(--vh, 1vh) * 100 - 423px);
+  height: calc(100dvh - 423px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -445,7 +445,6 @@ button {
 @media screen and (max-width: 960px) {
   .main__wrapper {
     height: initial;
-    min-height: 100vh;
     padding-top: 40px;
     padding-bottom: 40px;
     box-sizing: border-box;
