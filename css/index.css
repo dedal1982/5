@@ -558,10 +558,11 @@ button {
 .main__bg {
   font-family: "Buyan", sans-serif;
   font-weight: bold;
-  font-size: 600px;
-  line-height: 490px;
+  font-size: clamp(10rem, 20vw, 30rem);
+  line-height: 0.8;
   color: #2a2c2e;
   position: absolute;
+  z-index: 1;
 }
 @media screen and (max-width: 1220px) {
   .main__bg {
